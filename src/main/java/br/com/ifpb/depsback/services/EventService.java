@@ -28,6 +28,7 @@ public class EventService {
 
     public Event update(long idEvent, Event event) {
         Event eventDb = this.findById(idEvent);
+        eventDb.setContratante(event.getContratante());
         eventDb.setDescription(event.getDescription());
         eventDb.setStatus(event.getStatus());
         eventDb.setTitle(event.getTitle());
